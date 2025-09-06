@@ -11,12 +11,12 @@
     <meta property="og:title" content="ACILL X CODE | Modern Scripts & Premium Websites">
     <meta property="og:description" content="Temukan script Python gratis dan beli website premium siap pakai dari ACILL X CODE.">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://nama-domain-anda.com/">
-    <meta property="og:image" content="https://placehold.co/1200x630/111827/48D1CC/png?text=ACILL+X+CODE">
+    <meta property="og:url" content="https://acl-script.vercel.app/">
+    <meta property="og:image" content="https://i.ibb.co.com/nqsQG0jp/Screenshot-20250906-152222.jpg">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="ACILL X CODE | Modern Scripts & Premium Websites">
     <meta name="twitter:description" content="Temukan script Python gratis dan beli website premium siap pakai dari ACILL X CODE.">
-    <meta name="twitter:image" content="https://placehold.co/1200x630/111827/48D1CC/png?text=ACILL+X+CODE">
+    <meta name="twitter:image" content="https://i.ibb.co.com/nqsQG0jp/Screenshot-20250906-152222.jpg">
     <meta name="theme-color" content="#48D1CC">
 
     <script type='text/javascript' src='//pl27587130.revenuecpmgate.com/39/30/1d/39301df75cffee6c516db8f20335923e.js'></script>
@@ -99,7 +99,8 @@
         /* Memberi jeda animasi untuk setiap section */
         #free-script { animation-delay: 0.2s; }
         #premium-websites { animation-delay: 0.4s; }
-        #about-author { animation-delay: 0.6s; }
+        #community { animation-delay: 0.6s; } /* BARU DITAMBAHKAN */
+        #about-author { animation-delay: 0.8s; } /* DELAY DISESUAIKAN */
         
         .section-title {
             text-align: center;
@@ -131,6 +132,7 @@
             flex-direction: column;
             position: relative;
             overflow: hidden;
+            text-align: center; /* Membuat konten kartu di tengah */
         }
 
         .card:hover {
@@ -191,6 +193,7 @@
         .button-group {
             display: flex;
             gap: 10px;
+            margin-top: auto; /* Mendorong tombol ke bawah */
         }
 
         .btn {
@@ -226,19 +229,15 @@
         }
         
         /* About Author Section */
-        .about-card {
-            padding: 40px;
-            text-align: center;
-        }
-        
-        .about-card h3 {
-            font-size: 2rem;
-            margin-bottom: 10px;
-        }
-
         .about-card .subtitle {
             color: var(--text-muted);
             font-size: 1.1rem;
+            margin-bottom: 25px;
+        }
+        
+        .about-card .mission {
+            color: var(--text-color);
+            font-style: italic;
             margin-bottom: 25px;
         }
 
@@ -273,7 +272,7 @@
     <header>
         <div class="container">
             <h1>ACILL X CODE</h1>
-            <p>Developer & Digital Solution Provider</p>
+            <p>Mewujudkan Ide Digital Anda Menjadi Kenyataan</p>
         </div>
     </header>
 
@@ -298,12 +297,12 @@
             </section>
             
             <section id="premium-websites" class="section">
-                <h2 class="section-title">Jual Berbagai Website</h2>
+                <h2 class="section-title">Solusi Website Premium Siap Pakai</h2>
                 <div class="grid-layout">
                     
                     <article class="card">
                         <h3>Website Redeem Skin MLBB</h3>
-                        <p>Tampilan website modern untuk event redeem skin Mobile Legends. Cocok untuk phising atau promosi.</p>
+                        <p>Template event redeem skin Mobile Legends dengan antarmuka yang responsif dan modern. Didesain untuk menarik perhatian user dan efektif untuk berbagai kebutuhan promosi digital.</p>
                         <div class="price">Rp 50.000</div>
                         <div class="button-group">
                             <a href="https://mlbb-redeem.vercel.app/" target="_blank" class="btn btn-secondary">Live Demo</a>
@@ -313,7 +312,7 @@
 
                     <article class="card">
                         <h3>Website JAV Zone</h3>
-                        <p>Website streaming konten dewasa dengan tampilan premium dan modern. Siap pakai untuk traffic tinggi.</p>
+                        <p>Platform streaming konten dewasa yang elegan dengan desain premium. Dioptimalkan untuk menangani traffic tinggi dan memberikan pengalaman pengguna terbaik.</p>
                         <div class="price">Rp 50.000</div>
                         <div class="button-group">
                             <a href="https://jav-zone.vercel.app/" target="_blank" class="btn btn-secondary">Live Demo</a>
@@ -323,14 +322,24 @@
 
                     <article class="card">
                         <h3>Website Pemulihan Akun FB</h3>
-                        <p>Halaman login phising dengan tema "Pemulihan Akun Facebook" yang meyakinkan dan efektif.</p>
+                        <p>Landing page dengan tema pemulihan akun Facebook yang dirancang secara profesional untuk mengedukasi tentang keamanan atau untuk kebutuhan penetration testing.</p>
                         <div class="price">Rp 50.000</div>
                         <div class="button-group">
                             <a href="https://pemulihan-fb-com.netlify.app/" target="_blank" class="btn btn-secondary">Live Demo</a>
                             <a href="https://wa.me/601131325432?text=Halo%2C%20saya%20tertarik%20untuk%20membeli%20website%20Pemulihan%20Akun%20FB." target="_blank" class="btn btn-primary">Beli Sekarang</a>
                         </div>
                     </article>
+                </div>
+            </section>
 
+            <section id="community" class="section">
+                <h2 class="section-title">Gabung Komunitas Kami</h2>
+                <div class="grid-layout">
+                    <article class="card">
+                        <h3>Grup WhatsApp ACILL X CODE</h3>
+                        <p>Dapatkan update terbaru, diskusikan script, dan terhubung langsung dengan author serta member lainnya. Gabung sekarang untuk menjadi bagian dari komunitas kami!</p>
+                        <a href="https://chat.whatsapp.com/DkGBi4gmYM12hLlfComR83" target="_blank" class="btn btn-primary">Join WhatsApp Group</a>
+                    </article>
                 </div>
             </section>
 
@@ -339,6 +348,7 @@
                     <article class="card about-card">
                         <h3>ACILL X CODE</h3>
                         <p class="subtitle">Full-Stack Developer & Security Enthusiast</p>
+                        <p class="mission">"Dengan fokus pada kode yang bersih, performa tinggi, dan keamanan, saya siap membantu proyek Anda berikutnya."</p>
                         <p class="skills-title">Menguasai Bahasa Pemrograman:</p>
                         <div class="skills">
                             <div class="tags">
@@ -354,7 +364,6 @@
                     </article>
                 </div>
             </section>
-
         </div>
     </main>
 
