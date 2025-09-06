@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ACILL X CODE | Official Website</title>
+    
+    <style>
+        /* Import Font dan Reset CSS */
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+        /* Animasi Modern */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --bg-color: #111827;
+            --card-bg-color: rgba(31, 41, 55, 0.6);
+            --border-color: rgba(255, 255, 255, 0.2);
+            --primary-accent: #48D1CC;
+            --secondary-accent: #FFD700; /* Warna untuk harga/badge */
+            --text-color: #FFFFFF;
+            --text-muted: #9CA3AF;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            padding: 40px 0;
+            text-align: center;
+            border-bottom: 1px solid var(--border-color);
+            animation: fadeInUp 0.5s ease-out;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--primary-accent);
+        }
+
+        header p {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+        }
+
+        /* Main Content & Sections */
+        main {
+            padding: 40px 0;
+        }
+
+        .section {
+            margin-bottom: 60px;
+            animation: fadeInUp 0.5s ease-out forwards;
+            opacity: 0;
+        }
+        
+        /* Memberi jeda animasi untuk setiap section */
+        #free-script { animation-delay: 0.2s; }
+        #premium-websites { animation-delay: 0.4s; }
+        #about-author { animation-delay: 0.6s; }
+        
+        .section-title {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 40px;
+            color: var(--text-color);
+        }
+
+        /* Grid Layout */
+        .grid-layout {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+            justify-items: center;
+        }
+
+        /* Kartu (Style Umum) */
+        .card {
+            background: var(--card-bg-color);
+            border: 1px solid var(--border-color);
+            border-radius: 15px;
+            padding: 30px;
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            width: 100%;
+            max-width: 450px;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .card h3 {
+            font-size: 1.6rem;
+            color: var(--primary-accent);
+            margin-bottom: 15px;
+        }
+
+        .card p {
+            color: var(--text-muted);
+            margin-bottom: 25px;
+            font-size: 1rem;
+            flex-grow: 1; /* Membuat deskripsi mengisi ruang */
+        }
+
+        .tags {
+            margin-bottom: 25px;
+        }
+
+        .tags span {
+            background-color: rgba(72, 209, 204, 0.2);
+            color: var(--primary-accent);
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            margin: 5px 5px 5px 0;
+            display: inline-block;
+        }
+        
+        /* Badge Gratis */
+        .badge {
+            position: absolute;
+            top: -10px;
+            right: -10px;
+            background-color: var(--secondary-accent);
+            color: var(--bg-color);
+            padding: 10px 15px;
+            font-weight: 700;
+            font-size: 1rem;
+            transform: rotate(15deg);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
+        
+        /* Harga */
+        .price {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--secondary-accent);
+            margin-bottom: 20px;
+        }
+        
+        /* Tombol */
+        .button-group {
+            display: flex;
+            gap: 10px;
+        }
+
+        .btn {
+            display: block;
+            flex-grow: 1;
+            text-align: center;
+            padding: 12px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary {
+            background-color: var(--primary-accent);
+            color: var(--bg-color);
+        }
+        .btn-primary:hover {
+            background-color: #66e0da;
+            transform: scale(1.05);
+        }
+
+        .btn-secondary {
+            background-color: transparent;
+            color: var(--primary-accent);
+            border: 2px solid var(--primary-accent);
+        }
+        .btn-secondary:hover {
+            background-color: var(--primary-accent);
+            color: var(--bg-color);
+            transform: scale(1.05);
+        }
+        
+        /* About Author Section */
+        .about-card {
+            padding: 40px;
+            text-align: center;
+        }
+        
+        .about-card h3 {
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+
+        .about-card .subtitle {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+            margin-bottom: 25px;
+        }
+
+        .skills-title {
+            font-weight: 600;
+            margin-bottom: 15px;
+            color: var(--text-color);
+        }
+
+        .skills .tags span {
+            background-color: rgba(255,255,255,0.1);
+            color: var(--text-color);
+        }
+        
+        /* Footer */
+        footer {
+            padding: 30px 0;
+            text-align: center;
+            border-top: 1px solid var(--border-color);
+            margin-top: 40px;
+        }
+
+        footer .disclaimer {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <h1>ACILL X CODE</h1>
+            <p>Developer & Digital Solution Provider</p>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <section id="free-script" class="section">
+                <h2 class="section-title">Script Gratis</h2>
+                <div class="grid-layout">
+                    <article class="card">
+                        <div class="badge">GRATIS</div>
+                        <h3>ACL-MBF (Modern)</h3>
+                        <p>Script Facebook cracker canggih dengan tampilan modern, berbagai metode crack, dan alur verifikasi pengguna. Khusus untuk tujuan edukasi Python.</p>
+                        <div class="tags">
+                            <span>Python</span>
+                            <span>MBF</span>
+                            <span>Modern</span>
+                            <span>API</span>
+                        </div>
+                        <a href="https://github.com/AciLNiBoss/ACL-MBF" target="_blank" class="btn btn-primary">Lihat di GitHub</a>
+                    </article>
+                </div>
+            </section>
+            
+            <section id="premium-websites" class="section">
+                <h2 class="section-title">Jual Berbagai Website</h2>
+                <div class="grid-layout">
+                    
+                    <article class="card">
+                        <h3>Website Redeem Skin MLBB</h3>
+                        <p>Tampilan website modern untuk event redeem skin Mobile Legends. Cocok untuk phising atau promosi.</p>
+                        <div class="price">Rp 50.000</div>
+                        <div class="button-group">
+                            <a href="https://mlbb-redeem.vercel.app/" target="_blank" class="btn btn-secondary">Live Demo</a>
+                            <a href="https://wa.me/601131325432?text=Halo%2C%20saya%20tertarik%20untuk%20membeli%20website%20Redeem%20Skin%20MLBB." target="_blank" class="btn btn-primary">Beli Sekarang</a>
+                        </div>
+                    </article>
+
+                    <article class="card">
+                        <h3>Website JAV Zone</h3>
+                        <p>Website streaming konten dewasa dengan tampilan premium dan modern. Siap pakai untuk traffic tinggi.</p>
+                        <div class="price">Rp 50.000</div>
+                        <div class="button-group">
+                            <a href="https://jav-zone.vercel.app/" target="_blank" class="btn btn-secondary">Live Demo</a>
+                            <a href="https://wa.me/601131325432?text=Halo%2C%20saya%20tertarik%20untuk%20membeli%20website%20JAV%20Zone." target="_blank" class="btn btn-primary">Beli Sekarang</a>
+                        </div>
+                    </article>
+
+                    <article class="card">
+                        <h3>Website Pemulihan Akun FB</h3>
+                        <p>Halaman login phising dengan tema "Pemulihan Akun Facebook" yang meyakinkan dan efektif.</p>
+                        <div class="price">Rp 50.000</div>
+                        <div class="button-group">
+                            <a href="https://pemulihan-fb-com.netlify.app/" target="_blank" class="btn btn-secondary">Live Demo</a>
+                            <a href="https://wa.me/601131325432?text=Halo%2C%20saya%20tertarik%20untuk%20membeli%20website%20Pemulihan%20Akun%20FB." target="_blank" class="btn btn-primary">Beli Sekarang</a>
+                        </div>
+                    </article>
+
+                </div>
+            </section>
+
+            <section id="about-author" class="section">
+                 <div class="grid-layout">
+                    <article class="card about-card">
+                        <h3>ACILL X CODE</h3>
+                        <p class="subtitle">Full-Stack Developer & Security Enthusiast</p>
+                        <p class="skills-title">Menguasai Bahasa Pemrograman:</p>
+                        <div class="skills">
+                            <div class="tags">
+                                <span>Python</span>
+                                <span>HTML5</span>
+                                <span>CSS3</span>
+                                <span>JavaScript</span>
+                                <span>PHP</span>
+                                <span>SQL</span>
+                                <span>Dan lain-lain</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 ACILL X CODE. Semua hak cipta dilindungi.</p>
+            <p class="disclaimer">Semua tools dan website yang dibagikan hanya untuk tujuan edukasi. Risiko ditanggung pengguna.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
